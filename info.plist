@@ -27,25 +27,6 @@
 				<string></string>
 			</dict>
 		</array>
-		<key>B2FABB17-DCFD-41F8-8537-7DE1B495D7F7</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Khaliq Gant</string>
@@ -62,8 +43,40 @@
 			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
-tell application "Google Chrome"		set seenPlayerTab to 0		set thisWindowIndex to 1	repeat with thisWindow in windows				set thisTabIndex to 1		repeat with thisTab in tabs of thisWindow						if URL of thisTab starts with "https://www.focusatwill.com/" then				set seenPlayerTab to 1				exit repeat			end if						set thisTabIndex to thisTabIndex + 1					end repeat				if seenPlayerTab is greater than 0 then			exit repeat		end if				set thisWindowIndex to thisWindowIndex + 1			end repeat		tell tab thisTabIndex of window thisWindowIndex		execute javascript "$('.play').first().click()"	end tell	end tell
-end alfred_script</string>
+    tell application "Google Chrome"
+
+        set seenPlayerTab to 0
+
+        set thisWindowIndex to 1
+        repeat with thisWindow in windows
+
+            set thisTabIndex to 1
+            repeat with thisTab in tabs of thisWindow
+
+                if URL of thisTab starts with "http://hypem.com/" then
+                    set seenPlayerTab to 1
+                    exit repeat
+                end if
+
+                set thisTabIndex to thisTabIndex + 1
+
+            end repeat
+
+            if seenPlayerTab is greater than 0 then
+                exit repeat
+            end if
+
+            set thisWindowIndex to thisWindowIndex + 1
+
+        end repeat
+
+        tell tab thisTabIndex of window thisWindowIndex
+            execute javascript "$('#playerPlay').click()"
+        end tell
+
+    end tell
+end alfred_script
+</string>
 				<key>cachescript</key>
 				<true/>
 			</dict>
@@ -85,6 +98,8 @@ end alfred_script</string>
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -113,33 +128,12 @@ end alfred_script</string>
 				<key>text</key>
 				<string>Requested play/pause in Chrome</string>
 				<key>title</key>
-				<string>focus@will</string>
+				<string>hypem-hotkey</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>focus</string>
-				<key>subtext</key>
-				<string>Play or pause focusatwill.com in Google Chrome</string>
-				<key>text</key>
-				<string>Play/pause focus@will</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>B2FABB17-DCFD-41F8-8537-7DE1B495D7F7</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -157,11 +151,6 @@ end alfred_script</string>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
-		</dict>
-		<key>B2FABB17-DCFD-41F8-8537-7DE1B495D7F7</key>
-		<dict>
-			<key>ypos</key>
-			<real>250</real>
 		</dict>
 		<key>C69D4769-8711-4168-87A1-5773F3607E6D</key>
 		<dict>

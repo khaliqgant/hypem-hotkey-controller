@@ -27,7 +27,7 @@ on alfred_script(q)
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "$('#playerPlay').first().click()"
+            execute javascript "$('#playerPlay').click()"
         end tell
 
     end tell
