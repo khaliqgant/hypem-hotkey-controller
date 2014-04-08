@@ -9,7 +9,7 @@ on alfred_script(q)
             set thisTabIndex to 1
             repeat with thisTab in tabs of thisWindow
 
-                if URL of thisTab starts with "https://www.focusatwill.com/" then
+                if URL of thisTab starts with "http://hypem.com/" then
                     set seenPlayerTab to 1
                     exit repeat
                 end if
@@ -27,7 +27,7 @@ on alfred_script(q)
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "$('.play').first().click()"
+            execute javascript "$('#playerPlay').first().click()"
         end tell
 
     end tell
