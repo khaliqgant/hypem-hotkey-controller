@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.khaliqgant.hypemcontrol</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>07E16967-8DCD-4FE0-B29C-54E8468850B0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>B2FABB17-DCFD-41F8-8537-7DE1B495D7F7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Khaliq Gant</string>
+	<key>description</key>
+	<string>Play/pause hypem.com</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Hypem Hotkey Controller</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+tell application "Google Chrome"		set seenPlayerTab to 0		set thisWindowIndex to 1	repeat with thisWindow in windows				set thisTabIndex to 1		repeat with thisTab in tabs of thisWindow						if URL of thisTab starts with "https://www.focusatwill.com/" then				set seenPlayerTab to 1				exit repeat			end if						set thisTabIndex to thisTabIndex + 1					end repeat				if seenPlayerTab is greater than 0 then			exit repeat		end if				set thisWindowIndex to thisWindowIndex + 1			end repeat		tell tab thisTabIndex of window thisWindowIndex		execute javascript "$('.play').first().click()"	end tell	end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>07E16967-8DCD-4FE0-B29C-54E8468850B0</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Requested play/pause in Chrome</string>
+				<key>title</key>
+				<string>focus@will</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>focus</string>
+				<key>subtext</key>
+				<string>Play or pause focusatwill.com in Google Chrome</string>
+				<key>text</key>
+				<string>Play/pause focus@will</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B2FABB17-DCFD-41F8-8537-7DE1B495D7F7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>07E16967-8DCD-4FE0-B29C-54E8468850B0</key>
+		<dict>
+			<key>ypos</key>
+			<real>80</real>
+		</dict>
+		<key>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>B2FABB17-DCFD-41F8-8537-7DE1B495D7F7</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>C69D4769-8711-4168-87A1-5773F3607E6D</key>
+		<dict>
+			<key>ypos</key>
+			<real>150</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/khaliqgant/hypem-hotkey-controller</string>
+</dict>
+</plist>
