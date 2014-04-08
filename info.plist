@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</string>
+				<string>A8164576-B447-452B-9764-25107FB59394</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -41,49 +41,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-    tell application "Google Chrome"
-
-        set seenPlayerTab to 0
-
-        set thisWindowIndex to 1
-        repeat with thisWindow in windows
-
-            set thisTabIndex to 1
-            repeat with thisTab in tabs of thisWindow
-
-                if URL of thisTab starts with "http://hypem.com/" then
-                    set seenPlayerTab to 1
-                    exit repeat
-                end if
-
-                set thisTabIndex to thisTabIndex + 1
-
-            end repeat
-
-            if seenPlayerTab is greater than 0 then
-                exit repeat
-            end if
-
-            set thisWindowIndex to thisWindowIndex + 1
-
-        end repeat
-
-        tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "$('#playerPlay').click()"
-        end tell
-
-    end tell
-end alfred_script
-</string>
-				<key>cachescript</key>
-				<true/>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>osascript  scripts/hypem.applescript</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</string>
+			<string>A8164576-B447-452B-9764-25107FB59394</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -147,15 +115,15 @@ end alfred_script
 			<key>ypos</key>
 			<real>80</real>
 		</dict>
-		<key>6AAF8B1C-71D0-4CBD-B7A8-9FE2CAC1DABA</key>
+		<key>A8164576-B447-452B-9764-25107FB59394</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>20</real>
 		</dict>
 		<key>C69D4769-8711-4168-87A1-5773F3607E6D</key>
 		<dict>
 			<key>ypos</key>
-			<real>150</real>
+			<real>170</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
