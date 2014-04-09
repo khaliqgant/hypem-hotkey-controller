@@ -30,6 +30,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>2C25A0FA-41B2-4A0C-B695-50617484B83B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D058416F-03C2-42BC-A0FA-20C6D638C4D2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>5B958836-522F-4DDF-A5CC-3DA5332AD113</key>
 		<array>
 			<dict>
@@ -79,6 +90,17 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4153F1A0-7CE4-4246-B349-33BB152758B2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>D058416F-03C2-42BC-A0FA-20C6D638C4D2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>80CA2768-01DC-4075-8A08-874C591EB89C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -135,31 +157,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
-				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>Pause/Play</string>
-				<key>title</key>
-				<string>Hypem Hotkey!</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -182,7 +179,32 @@
 				<key>onlyshowifquerypopulated</key>
 				<false/>
 				<key>output</key>
-				<integer>0</integer>
+				<integer>2</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Pause/Play</string>
+				<key>title</key>
+				<string>Hypem Hotkey!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C69D4769-8711-4168-87A1-5773F3607E6D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>2</integer>
 				<key>removeextension</key>
 				<false/>
 				<key>sticky</key>
@@ -266,13 +288,13 @@
 				<key>onlyshowifquerypopulated</key>
 				<false/>
 				<key>output</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>removeextension</key>
 				<false/>
 				<key>sticky</key>
 				<false/>
 				<key>text</key>
-				<string>Hypem previous</string>
+				<string>Previous</string>
 				<key>title</key>
 				<string>Hypem Hotkey!</string>
 			</dict>
@@ -358,7 +380,7 @@
 				<key>onlyshowifquerypopulated</key>
 				<false/>
 				<key>output</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>removeextension</key>
 				<false/>
 				<key>sticky</key>
@@ -372,6 +394,73 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>4153F1A0-7CE4-4246-B349-33BB152758B2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>2</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Heart: {query}</string>
+				<key>title</key>
+				<string>Hypem Hotkey!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>80CA2768-01DC-4075-8A08-874C591EB89C</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>osascript  scripts/status.applescript</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D058416F-03C2-42BC-A0FA-20C6D638C4D2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>2C25A0FA-41B2-4A0C-B695-50617484B83B</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -389,6 +478,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>210</real>
+		</dict>
+		<key>2C25A0FA-41B2-4A0C-B695-50617484B83B</key>
+		<dict>
+			<key>ypos</key>
+			<real>570</real>
 		</dict>
 		<key>4153F1A0-7CE4-4246-B349-33BB152758B2</key>
 		<dict>
@@ -415,6 +509,11 @@
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
+		<key>80CA2768-01DC-4075-8A08-874C591EB89C</key>
+		<dict>
+			<key>ypos</key>
+			<real>570</real>
+		</dict>
 		<key>A8164576-B447-452B-9764-25107FB59394</key>
 		<dict>
 			<key>ypos</key>
@@ -434,6 +533,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>330</real>
+		</dict>
+		<key>D058416F-03C2-42BC-A0FA-20C6D638C4D2</key>
+		<dict>
+			<key>ypos</key>
+			<real>570</real>
 		</dict>
 		<key>EF432727-DE9F-4ACC-9B3D-DA5D6C1AF6F5</key>
 		<dict>
