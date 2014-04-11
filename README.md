@@ -1,4 +1,4 @@
-hypem-hotkey-controller [Download 1.1.0](http://bit.ly/1kEkXt7)
+hypem-hotkey-controller [Download 1.2.0](http://bit.ly/1kEkXt7)
 =======================
 
 Control hypem.com via hotkeys using Alfred
