@@ -137,11 +137,11 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>27</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>-</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -185,9 +185,9 @@
 				<key>sticky</key>
 				<false/>
 				<key>text</key>
-				<string>Pause/Play</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Hypem Hotkey!</string>
+				<string>Pause/Play</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -210,9 +210,9 @@
 				<key>sticky</key>
 				<false/>
 				<key>text</key>
-				<string>Next</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Hypem Hotkey!</string>
+				<string>Next</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -229,11 +229,11 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>38</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>J</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -294,9 +294,9 @@
 				<key>sticky</key>
 				<false/>
 				<key>text</key>
-				<string>Previous</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Hypem Hotkey!</string>
+				<string>Previous</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -313,11 +313,11 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>40</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>K</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -338,11 +338,11 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>4</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>H</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -386,9 +386,9 @@
 				<key>sticky</key>
 				<false/>
 				<key>text</key>
-				<string>Heart</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Hypem Hotkey!</string>
+				<string>Heart</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -403,7 +403,7 @@
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<false/>
+				<true/>
 				<key>output</key>
 				<integer>2</integer>
 				<key>removeextension</key>
@@ -411,9 +411,9 @@
 				<key>sticky</key>
 				<false/>
 				<key>text</key>
-				<string>Heart: {query}</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Hypem Hotkey!</string>
+				<string>Status</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -447,11 +447,11 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>39</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>'</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
