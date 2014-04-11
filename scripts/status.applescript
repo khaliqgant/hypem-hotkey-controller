@@ -29,11 +29,15 @@ on run
         tell tab thisTabIndex of window thisWindowIndex
             execute javascript "function status(){
                 var output = $('#playerFav').hasClass('fav-on');
-                return output;
+                var status = 'Not Loved';
+                if (output)
+                    var status = 'Loved';
+                var artist = $('#player-nowplaying').find('a').first().text();
+                var track = $('#player-nowplaying').children('a').eq(1).text();
+                var complete = artist + ' - ' + track + ': ' + status;
+                return complete;
                 } status();"
-                set status to the result
         end tell
     end tell
-    return status
 end run
 

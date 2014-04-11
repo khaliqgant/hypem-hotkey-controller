@@ -27,7 +27,17 @@ on run
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "$('#playerPlay').click()"
+            execute javascript "function play(){
+                $('#playerPlay').click()
+                var result = 'Pause';
+                var status = $('#playerPlay').hasClass('play');
+                if (!status)
+                    var result = 'Play';
+                var artist = $('#player-nowplaying').find('a').first().text();
+                var track = $('#player-nowplaying').children('a').eq(1).text();
+                var complete = result + ' : ' + artist + ' - ' + track;
+                return complete;
+                } play();"
         end tell
 
     end tell

@@ -27,7 +27,17 @@ on run
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "$('#playerFav').click()"
+            execute javascript "function fav(){
+                $('#playerFav').click()
+                var result = 'Unloved';
+                var status = $('#playerFav').hasClass('fav-on');
+                if (status)
+                    var result = 'Loved';
+                var artist = $('#player-nowplaying').find('a').first().text();
+                var track = $('#player-nowplaying').children('a').eq(1).text();
+                var complete = 'Just ' + result + ' : ' + artist + ' - ' + track;
+                return complete;
+                } fav();"
         end tell
 
     end tell
