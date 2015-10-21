@@ -27,16 +27,22 @@ on run
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "function status(){
-                var output = $('#playerFav').hasClass('fav-on');
-                var status = 'Not Loved';
-                if (output)
-                    var status = 'Loved';
-                var artist = $('#player-nowplaying').find('a').first().text();
-                var track = $('#player-nowplaying').children('a').eq(1).text();
-                var complete = artist + ' - ' + track + ': ' + status;
-                return complete;
-                } status();"
+            execute javascript "
+                function status(){
+                    var favWord = 'fav-on';
+                    var control = document.getElementById('playerFav');
+                    var status = (control.className).indexOf(favWord) != -1 ? 'Loved' : 'Not Loved';
+
+                    var infoNode = document.getElementById('player-nowplaying').childNodes;
+                    var artist = infoNode[0].text;
+                    var seperator = infoNode[1].text;
+                    var track = infoNode[2].text;
+                    var string = artist + ' - ' + track + ': ' + status;
+
+                    return string;
+                } 
+            status();
+            "
         end tell
     end tell
 end run
