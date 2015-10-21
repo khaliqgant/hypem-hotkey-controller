@@ -27,17 +27,36 @@ on run
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "function fav(){
-                $('#playerFav').click()
-                var result = 'Unloved';
-                var status = $('#playerFav').hasClass('fav-on');
-                if (status)
-                    var result = 'Loved';
-                var artist = $('#player-nowplaying').find('a').first().text();
-                var track = $('#player-nowplaying').children('a').eq(1).text();
-                var complete = 'Just ' + result + ' : ' + artist + ' - ' + track;
-                return complete;
-                } fav();"
+            execute javascript "
+            function eventFire(el, etype){
+                if (el.fireEvent) {
+                    el.fireEvent('on' + etype);
+                } else {
+                    var evObj = document.createEvent('Events');
+                    evObj.initEvent(etype, true, false);
+                    el.dispatchEvent(evObj);
+                }
+            }
+            function fav(){
+                var control = document.getElementById('playerFav');
+                var favWord = 'fav-on';
+                var result = 'Loved';
+                if ((control.className).indexOf(favWord) != -1) {
+                    // was loved before
+                    result = 'Unloved';
+                }
+
+                eventFire(control,'click');
+                var infoNode = document.getElementById('player-nowplaying').childNodes;
+                var artist = infoNode[0].text;
+                var seperator = infoNode[1].text;
+                var track = infoNode[2].text;
+                var string = 'Just ' + result + ' : ' + artist + seperator + track;
+
+                return string;
+            } 
+            fav();
+            "
         end tell
 
     end tell
