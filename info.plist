@@ -137,14 +137,16 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>27</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>-</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
@@ -152,11 +154,13 @@
 			<key>uid</key>
 			<string>07E16967-8DCD-4FE0-B29C-54E8468850B0</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -229,14 +233,16 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>38</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>J</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
@@ -244,11 +250,13 @@
 			<key>uid</key>
 			<string>0838267B-84B8-4593-B56F-D908D8A2E75D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -266,6 +274,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
@@ -313,14 +323,16 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>40</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>K</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
@@ -328,7 +340,7 @@
 			<key>uid</key>
 			<string>73D78C55-B8A0-4EC8-B760-7BEF5B888E67</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -338,14 +350,16 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>4</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>H</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
@@ -353,11 +367,13 @@
 			<key>uid</key>
 			<string>EF432727-DE9F-4ACC-9B3D-DA5D6C1AF6F5</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
@@ -425,6 +441,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -447,20 +465,47 @@
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>39</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>'</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>2C25A0FA-41B2-4A0C-B695-50617484B83B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>2</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Listener</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>28DEA999-C6BF-4CFD-B6BC-5EE59A0B216F</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -478,6 +523,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>210</real>
+		</dict>
+		<key>28DEA999-C6BF-4CFD-B6BC-5EE59A0B216F</key>
+		<dict>
+			<key>ypos</key>
+			<real>690</real>
 		</dict>
 		<key>2C25A0FA-41B2-4A0C-B695-50617484B83B</key>
 		<dict>
