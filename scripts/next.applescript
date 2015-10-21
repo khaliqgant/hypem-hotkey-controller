@@ -27,13 +27,29 @@ on run
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "function next(){
-                $('#playerNext').click()
-                var artist = $('#player-nowplaying').find('a').first().text();
-                var track = $('#player-nowplaying').children('a').eq(1).text();
-                var complete = 'Now Playing: ' + artist + ' - ' + track;
-                return complete;
-                } next();"
+            execute javascript "
+            function eventFire(el, etype){
+                if (el.fireEvent) {
+                    el.fireEvent('on' + etype);
+                } else {
+                    var evObj = document.createEvent('Events');
+                    evObj.initEvent(etype, true, false);
+                    el.dispatchEvent(evObj);
+                }
+            }
+            function next(){
+                var control = document.getElementById('playerNext');
+                eventFire(control,'click');
+                var infoNode = document.getElementById('player-nowplaying').childNodes;
+                var artist = infoNode[0].text;
+                var seperator = infoNode[1].text;
+                var track = infoNode[2].text;
+                var string = 'Now Playing' + ' : ' + artist + seperator + track;
+
+                return string;
+            } 
+            next();
+            "
         end tell
 
     end tell
