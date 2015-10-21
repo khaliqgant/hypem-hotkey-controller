@@ -27,17 +27,33 @@ on run
         end repeat
 
         tell tab thisTabIndex of window thisWindowIndex
-            execute javascript "function play(){
-                $('#playerPlay').click()
-                var result = 'Pause';
-                var status = $('#playerPlay').hasClass('play');
-                if (!status)
-                    var result = 'Play';
-                var artist = $('#player-nowplaying').find('a').first().text();
-                var track = $('#player-nowplaying').children('a').eq(1).text();
-                var complete = result + ' : ' + artist + ' - ' + track;
-                return complete;
-                } play();"
+            execute javascript "
+            function eventFire(el, etype){
+                if (el.fireEvent) {
+                    el.fireEvent('on' + etype);
+                } else {
+                    var evObj = document.createEvent('Events');
+                    evObj.initEvent(etype, true, false);
+                    el.dispatchEvent(evObj);
+                }
+            }
+            function play(){
+                var control = document.getElementById('playerPlay');
+                var result = 'Play';
+                if ((control.className).indexOf('pause') != -1) {
+                    // hitting the button will pause the track
+                    result = 'Pause';
+                }
+                eventFire(control,'click');
+                var infoNode = document.getElementById('player-nowplaying').childNodes;
+                var artist = infoNode[0].text;
+                var seperator = infoNode[1].text;
+                var track = infoNode[2].text;
+                var string = result + ' : ' + artist + seperator + track;
+                return string;
+            } 
+            play();
+            "
         end tell
 
     end tell
