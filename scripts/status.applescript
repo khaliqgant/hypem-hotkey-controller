@@ -9,7 +9,7 @@ on run
             set thisTabIndex to 1
             repeat with thisTab in tabs of thisWindow
 
-                if URL of thisTab starts with "http://hypem.com/" then
+                if URL of thisTab starts with "https://hypem.com/" then
                     set seenPlayerTab to 1
                     exit repeat
                 end if
