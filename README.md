@@ -8,3 +8,5 @@ Control hypem.com via hotkeys using Alfred
 * This only supports Google Chrome currently, let me know if you want other browser support. 
 
 * This is basically a port using [focusatwill-in-google-chrome](https://github.com/tangledhelix/focusatwill-in-google-chrome)
+* You must allow in Chrome "Executing Javascript through Applescript": 
+To turn it on, from the menu bar, go to View > Developer > Allow JavaScript from Apple Events
